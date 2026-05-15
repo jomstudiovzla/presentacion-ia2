@@ -205,4 +205,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Dual Buttons Logic (Inscribirse / Contactanos)
+    const btnNichoInscribirse = document.getElementById('btn-nicho-inscribirse');
+    const btnNichoContactanos = document.getElementById('btn-nicho-contactanos');
+    const btnSuccessInscribirse = document.getElementById('btn-success-inscribirse');
+    const btnSuccessContactanos = document.getElementById('btn-success-contactanos');
+
+    const handleInscribirse = () => {
+        window.open(GOOGLE_FORM_URL, '_blank');
+        if (isModalOpen) closeModal();
+    };
+
+    const handleContactanos = () => {
+        window.open(WHATSAPP_URL, '_blank');
+        if (isModalOpen) closeModal();
+    };
+
+    if (btnNichoInscribirse) btnNichoInscribirse.addEventListener('click', handleInscribirse);
+    if (btnNichoContactanos) btnNichoContactanos.addEventListener('click', handleContactanos);
+    if (btnSuccessInscribirse) btnSuccessInscribirse.addEventListener('click', handleInscribirse);
+    if (btnSuccessContactanos) btnSuccessContactanos.addEventListener('click', handleContactanos);
 });

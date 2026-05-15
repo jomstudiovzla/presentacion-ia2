@@ -686,6 +686,24 @@ body {
     font-weight: 900;
 }
 
+.dual-buttons-container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn-dual {
+    flex: 1;
+    font-size: 0.9rem !important;
+    padding: 12px 5px !important;
+}
+
+@media (max-width: 480px) {
+    .btn-dual {
+        font-size: 0.8rem !important;
+    }
+}
+
 @media (min-width: 768px) {
     .presentation-container {
         border: 2px solid var(--border-color);
