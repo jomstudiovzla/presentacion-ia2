@@ -2,6 +2,7 @@
 // CONFIGURACIÓN: Reemplaza este enlace con tu Google Form
 // ==========================================
 const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSckI1iQuFIiNF3jQH8qpzG58f8DNK_nbSc-zHdxL666zYVsvw/viewform';
+const WHATSAPP_URL = 'https://wa.me/584241361642?text=Datos%20de%20Pago%20Movil';
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (finishBtn) {
         finishBtn.addEventListener('click', () => {
             // Abre la URL configurada arriba
-            window.open(GOOGLE_FORM_URL, '_blank');
+            // Abre WhatsApp para el pago
+            window.open(WHATSAPP_URL, '_blank');
             
             // Cierra el overlay por si vuelven a la pestaña
             successOverlay.classList.remove('show');
@@ -191,7 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // Abre la URL configurada arriba
-            window.open(GOOGLE_FORM_URL, '_blank');
+            // Abre WhatsApp para el pago
+            window.open(WHATSAPP_URL, '_blank');
             closeModal();
             
             // Opcional: mostrar la pantalla de éxito después de inscribirse
