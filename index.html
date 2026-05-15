@@ -2,179 +2,405 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>IA desde tu celular - Instituto Acacentro</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <header class="top-header">
-        <div class="brand-logo">ACACENTRO</div>
-        <div class="header-subtitle">Programa de Innovación Tecnológica</div>
+    <!-- Top Progress Bar (Duolingo style) -->
+    <header class="top-bar">
+        <button class="close-btn" aria-label="Cerrar">✖</button>
+        <div class="progress-container">
+            <div class="progress-bar-fill" id="progress-bar"></div>
+            <div class="progress-bar-highlight"></div>
+        </div>
+        <div class="hearts-container">
+            <span class="heart-icon">❤️</span> <span class="heart-count">5</span>
+        </div>
     </header>
 
-    <div class="presentation-container">
+    <main class="presentation-container">
         <!-- Slide 1: Portada -->
         <section class="slide active" id="slide-1">
             <div class="content-panel text-center">
-                <span class="badge">Curso Intensivo</span>
-                <h1 class="main-title">Inteligencia Artificial<br><span class="accent-text">desde tu celular</span></h1>
-                <p class="subtitle">Aprende, crea y genera valor sin conocimientos técnicos previos.</p>
-                
-                <div class="quote-box">
-                    <p class="highlight-text">"Si sabes usar WhatsApp, tienes la capacidad de implementar la IA en tu trabajo."</p>
+                <div class="partnership-logos">
+                    <!-- Acacentro Logo -->
+                    <img src="assets/logos/acacentro.png" alt="Acacentro" class="img-logo selectable" data-modal-target="modal-acacentro">
+                    
+                    <span class="partner-divider">✖</span>
+                    
+                    <!-- JOM Studio Logo -->
+                    <img src="assets/logos/jom_studio_1.png" alt="JOM Studio" class="img-logo selectable" data-modal-target="modal-jom">
+
+                    <span class="partner-divider">✖</span>
+                    
+                    <!-- PocketAI Logo -->
+                    <img src="assets/logos/pocketai_color.png" alt="PocketAI" class="img-logo selectable" data-modal-target="modal-pocketai">
                 </div>
                 
-                <div class="ai-tools-preview">
-                    <span class="tool-tag">ChatGPT</span>
-                    <span class="tool-tag">Gemini</span>
-                    <span class="tool-tag">Perplexity</span>
-                    <span class="tool-tag">Canva</span>
-                    <span class="tool-tag">CapCut</span>
-                    <span class="tool-tag">Suno</span>
-                    <span class="tool-tag">ElevenLabs</span>
+                <div class="character-mascot bounce-anim" style="margin-top: 10px;">🤖</div>
+                <h1 class="main-title">IA desde tu celular</h1>
+                <p class="subtitle font-bold">Programa de Innovación Tecnológica</p>
+                
+                <div class="badges-row">
+                    <span class="badge badge-green">⏱️ 4 Sesiones</span>
+                    <span class="badge badge-blue">📱 100% Celular</span>
+                </div>
+                
+                <div class="bubble-speech">
+                    <p>"Si sabes usar WhatsApp, tienes la capacidad de implementar la IA en tu trabajo."</p>
+                    <div class="bubble-tail"></div>
+                </div>
+                
+                <div class="app-chip-container">
+                    <div class="app-chip selectable" data-modal-target="modal-chatgpt">ChatGPT</div>
+                    <div class="app-chip selectable" data-modal-target="modal-gemini">Gemini</div>
+                    <div class="app-chip selectable" data-modal-target="modal-canva">Canva</div>
+                    <div class="app-chip selectable" data-modal-target="modal-capcut">CapCut</div>
                 </div>
             </div>
         </section>
-
-        <!-- Slide 2: Módulo 1 -->
+        
+        <!-- Slide 2: Plan -->
         <section class="slide" id="slide-2">
             <div class="content-panel">
-                <div class="module-header">
-                    <span class="module-number">Módulo 01</span>
-                    <h2>Fundamentos y Adopción</h2>
-                </div>
-                <ul class="features-list">
-                    <li><strong>Conceptos Base:</strong> ¿Qué es la IA? Explicación clara y sin tecnicismos.</li>
-                    <li><strong>Aplicabilidad:</strong> Casos reales de uso en el entorno laboral actual.</li>
-                    <li><strong>Herramientas Esenciales:</strong>
-                        <div class="app-grid mt-10">
-                            <span class="app-chip">ChatGPT</span>
-                            <span class="app-chip">Gemini</span>
-                            <span class="app-chip">Perplexity</span>
+                <h2 class="section-title">Plan de Clases</h2>
+                <p class="subtitle">Toca cada módulo para ver los detalles.</p>
+                
+                <div class="lesson-list">
+                    <div class="lesson-card selectable" data-modal-target="modal-mod1">
+                        <div class="lesson-icon blue">1</div>
+                        <div class="lesson-text">
+                            <h3>Romper la barrera</h3>
+                            <p>IA, Ciberseguridad y VPNs.</p>
                         </div>
-                    </li>
-                </ul>
-                <div class="action-box">
-                    <div class="action-label">Actividad Práctica</div>
-                    <p>Interactuar con un asistente de IA para estructurar y optimizar la agenda semanal de trabajo.</p>
+                    </div>
+                    <div class="lesson-card selectable" data-modal-target="modal-mod2">
+                        <div class="lesson-icon orange">2</div>
+                        <div class="lesson-text">
+                            <h3>Ingeniería de Prompts</h3>
+                            <p>Cómo dar instrucciones exactas.</p>
+                        </div>
+                    </div>
+                    <div class="lesson-card selectable" data-modal-target="modal-mod3">
+                        <div class="lesson-icon green">3</div>
+                        <div class="lesson-text">
+                            <h3>Taller creativo</h3>
+                            <p>Diseño, video y voz con IA.</p>
+                        </div>
+                    </div>
+                    <div class="lesson-card selectable" data-modal-target="modal-mod4">
+                        <div class="lesson-icon purple">4</div>
+                        <div class="lesson-text">
+                            <h3>Monetización</h3>
+                            <p>Tu modelo de negocios portátil.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 3: Módulo 2 -->
-        <section class="slide" id="slide-3">
-            <div class="content-panel">
-                <div class="module-header">
-                    <span class="module-number">Módulo 02</span>
-                    <h2>Ingeniería de Prompts</h2>
-                </div>
-                <ul class="features-list">
-                    <li><strong>Comunicación Efectiva:</strong> El arte de estructurar instrucciones (prompts).</li>
-                    <li><strong>Estructura Metodológica:</strong> <br>
-                        <div class="formula-text">Contexto ("Actúa como...") + Instrucción ("Ayúdame a...") + Objetivo ("Para...")</div>
-                    </li>
-                    <li><strong>Control de Calidad:</strong> Identificación y prevención de errores comunes.</li>
-                </ul>
-                <div class="action-box">
-                    <div class="action-label">Actividad Práctica</div>
-                    <p>Diseñar instrucciones precisas para generar 5 líneas de contenido estratégico para redes sociales.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 4: Módulo 3 -->
-        <section class="slide" id="slide-4">
-            <div class="content-panel">
-                <div class="module-header">
-                    <span class="module-number">Módulo 03</span>
-                    <h2>Creación de Contenido</h2>
-                </div>
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <div class="icon-wrapper">📝</div>
-                        <h3>Redacción</h3>
-                        <p>Artículos, guiones, correos</p>
-                    </div>
-                    <div class="grid-item">
-                        <div class="icon-wrapper">🎨</div>
-                        <h3>Diseño</h3>
-                        <p>Canva Móvil asistido</p>
-                    </div>
-                    <div class="grid-item">
-                        <div class="icon-wrapper">🎬</div>
-                        <h3>Audiovisual</h3>
-                        <p>Edición inteligente (CapCut)</p>
-                    </div>
-                    <div class="grid-item">
-                        <div class="icon-wrapper">🎙️</div>
-                        <h3>Voz y Sonido</h3>
-                        <p>ElevenLabs, Suno</p>
-                    </div>
-                </div>
-                <div class="action-box">
-                    <div class="action-label">Actividad Práctica</div>
-                    <p>Desarrollar una pieza gráfica publicitaria y un video corto promocional utilizando herramientas generativas.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 5: Módulo 4 -->
-        <section class="slide" id="slide-5">
-            <div class="content-panel">
-                <div class="module-header">
-                    <span class="module-number">Módulo 04</span>
-                    <h2>Monetización y Servicios</h2>
-                </div>
-                <ul class="features-list">
-                    <li><strong>Portafolio Rápido:</strong> Generación de menús, logotipos y flyers comerciales.</li>
-                    <li><strong>Gestión Digital:</strong> Administración y automatización de redes sociales.</li>
-                    <li><strong>Estrategia Comercial:</strong> Empaquetado y venta de servicios desde dispositivos móviles.</li>
-                </ul>
-                <div class="action-box">
-                    <div class="action-label">Actividad Práctica</div>
-                    <p>Redactar y estructurar una propuesta de servicios profesionales altamente persuasiva.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 6: Proyecto Final -->
-        <section class="slide" id="slide-6">
+        <!-- Slide 3: Bonos -->
+        <section class="slide" id="slide-bonos">
             <div class="content-panel text-center">
-                <span class="badge">Evaluación Final</span>
-                <h2 style="margin: 20px 0;">Proyecto de Aplicación</h2>
-                <p class="subtitle" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px;">
-                    Desarrollo de un producto funcional y comercializable, ejecutado íntegramente desde un dispositivo móvil.
-                </p>
+                <div class="character-mascot bounce-anim">🎁</div>
+                <h2 class="section-title">Bonos Exclusivos</h2>
+                <p class="subtitle">Recursos extra sin costo adicional:</p>
                 
-                <div class="tags-container">
-                    <div class="final-project-card">
-                        <strong>01.</strong> Recetario Digital
+                <div class="bonus-grid">
+                    <div class="bonus-card">
+                        <div class="bonus-emoji">💡</div>
+                        <h3>50 Prompts Premium</h3>
                     </div>
-                    <div class="final-project-card">
-                        <strong>02.</strong> Parrilla de Contenido
+                    <div class="bonus-card">
+                        <div class="bonus-emoji">📋</div>
+                        <h3>Checklist Monetización</h3>
                     </div>
-                    <div class="final-project-card">
-                        <strong>03.</strong> Piloto de Podcast
+                    <div class="bonus-card">
+                        <div class="bonus-emoji">🎓</div>
+                        <h3>Certificado Digital QR</h3>
                     </div>
-                    <div class="final-project-card">
-                        <strong>04.</strong> Dossier de Servicios
+                    <div class="bonus-card">
+                        <div class="bonus-emoji">👥</div>
+                        <h3>Grupo VIP (3 meses)</h3>
                     </div>
-                </div>
-                
-                <div class="resultado-box">
-                    <h3>Resultado Esperado:</h3>
-                    <p>Al finalizar, el estudiante poseerá un activo digital creado por sí mismo, validando la adquisición de competencias técnicas.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Slide 4: Final -->
+        <section class="slide" id="slide-final">
+            <div class="content-panel text-center">
+                <div class="character-mascot success-bounce">🏆</div>
+                <h2 class="section-title">Tu Proyecto Final</h2>
+                <p class="subtitle">Desarrolla tu propio modelo de negocio 100% celular creado con inteligencia artificial.</p>
+                
+                <div class="options-list">
+                    <div class="option-item selectable" style="pointer-events: none;">Agencia Express</div>
+                    <div class="option-item selectable" style="pointer-events: none;">Podcast Educativo</div>
+                    <div class="option-item selectable" style="pointer-events: none;">Recetarios Digitales</div>
+                    <div class="option-item selectable" data-modal-target="modal-nicho" style="background: var(--blue-light); color: var(--blue-shadow); border-color: var(--blue);">
+                        <strong>+ Escribe tu propio nicho ✏️</strong>
+                    </div>
+                </div>
+                
+                <p class="final-message font-bold mt-20" style="color: #58cc02; font-size: 1.1rem;">¡Tendrás una base comercial sólida y total autonomía!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modals Overlay Container -->
+    <div class="modal-overlay" id="modal-overlay">
+        
+        <!-- Modal: ChatGPT -->
+        <div class="modal-box" id="modal-chatgpt">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--green-light); color: var(--green-shadow);">APP / IA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">ChatGPT</h2>
+            <div class="info-card">
+                <p>Es una inteligencia artificial conversacional desarrollada por <strong>OpenAI</strong>. Es capaz de entender lenguaje natural, responder preguntas complejas, redactar textos y ayudarte a estructurar ideas o resolver problemas como si hablaras con un experto.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Gemini -->
+        <div class="modal-box" id="modal-gemini">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--blue-light); color: var(--blue-shadow);">APP / IA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">Gemini</h2>
+            <div class="info-card">
+                <p>El modelo de inteligencia artificial más potente de <strong>Google</strong>. Además de generar textos y conversar, tiene una integración profunda con los servicios de Google y destaca en la lectura, análisis y resumen de información directamente desde internet en tiempo real.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Canva -->
+        <div class="modal-box" id="modal-canva">
+            <div class="modal-header">
+                <div class="module-badge" style="background: #e0f2fe; color: #0284c7;">HERRAMIENTA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">Canva</h2>
+            <div class="info-card">
+                <p>Plataforma de <strong>diseño gráfico</strong> muy intuitiva. En su última versión incorpora potentes herramientas mágicas de IA para generar imágenes desde cero, editar fondos automáticamente o adaptar formatos, ideal para redes sociales.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: CapCut -->
+        <div class="modal-box" id="modal-capcut">
+            <div class="modal-header">
+                <div class="module-badge" style="background: #f1f5f9; color: #0f172a;">HERRAMIENTA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">CapCut</h2>
+            <div class="info-card">
+                <p>Aplicación líder en <strong>edición de video</strong> para móviles. Cuenta con funciones de Inteligencia Artificial que te permiten generar subtítulos automáticos, aplicar efectos de voz, remover fondos y crear videos atractivos en minutos.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Modulo 1 -->
+        <div class="modal-box" id="modal-mod1">
+            <div class="modal-header">
+                <div class="module-badge">MÓDULO 01</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">Fundamentos y VPN</h2>
+            <div class="info-card">
+                <ul class="custom-list">
+                    <li><strong>Conceptos Base:</strong> Desmitificando la IA.</li>
+                    <li><strong>VPNs:</strong> Acceso sin fronteras y ciberseguridad.</li>
+                    <li><strong>Apps:</strong> Instalación de Gemini y Perplexity.</li>
+                </ul>
+            </div>
+            <div class="action-card">
+                <div class="action-header">⭐ Misión Práctica</div>
+                <p>Instalar una VPN y solicitar a una IA bloqueada la estructuración de la semana.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Modulo 2 -->
+        <div class="modal-box" id="modal-mod2">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--orange-shadow); color: white;">MÓDULO 02</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">Ingeniería de Prompts</h2>
+            <p class="subtitle">La fórmula secreta para hablar con la máquina.</p>
+            <div class="formula-container">
+                <div class="formula-box">Rol</div>
+                <span class="formula-plus">+</span>
+                <div class="formula-box">Tarea</div>
+                <span class="formula-plus">+</span>
+                <div class="formula-box">Contexto</div>
+            </div>
+            <div class="action-card mt-20" style="border-color: var(--orange); background: #fff5e6; color: var(--orange-shadow);">
+                <div class="action-header" style="color: var(--orange);">⭐ Misión Práctica</div>
+                <p>Diseñar un "Mega-Prompt" para generar 5 ideas virales de contenido.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom" style="background: var(--orange); border-bottom-color: var(--orange-shadow);">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Modulo 3 -->
+        <div class="modal-box" id="modal-mod3">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--green-shadow); color: white;">MÓDULO 03</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">El Taller Creativo</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <span class="tool-icon">📝</span>
+                    <p>Texto</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-icon">🎨</span>
+                    <p>Canva</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-icon">🎬</span>
+                    <p>CapCut</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-icon">🎙️</span>
+                    <p>Suno</p>
+                </div>
+            </div>
+            <div class="action-card mt-20">
+                <div class="action-header">⭐ Misión Práctica</div>
+                <p>Desarrollar una pieza gráfica y un video corto promocional.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Modulo 4 -->
+        <div class="modal-box" id="modal-mod4">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--purple); color: white;">MÓDULO 04</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title">Modelo de Negocios</h2>
+            <p class="subtitle">Tu agencia digital de bolsillo.</p>
+            <div class="info-card">
+                <ul class="custom-list">
+                    <li><strong>Servicios:</strong> Portafolio de alta demanda.</li>
+                    <li><strong>Redes:</strong> 1 mes de contenido en 1 día.</li>
+                    <li><strong>Ventas:</strong> Estructuración de precios rentables.</li>
+                </ul>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom" style="background: var(--purple); border-bottom-color: #aa5ddf;">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: Elegir Nicho -->
+        <div class="modal-box" id="modal-nicho">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--blue); color: white;">TU PROYECTO</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <h2 class="section-title" style="margin-bottom: 10px;">¿Cuál es tu idea?</h2>
+            <p class="subtitle" style="margin-bottom: 20px;">Escribe el nicho en el que quieres emprender.</p>
+            
+            <textarea id="nicho-input" class="custom-textarea" placeholder="Ej: Venta de postres, consultoría online, ropa vintage..." rows="4"></textarea>
+            
+            <div class="payment-info mt-20" style="background: #f1f5f9; padding: 15px; border-radius: 16px; text-align: center; font-size: 0.9rem;">
+                <p><strong>Paso final:</strong> Al enviar, serás redirigido a la pre-inscripción donde deberás adjuntar tu comprobante de pago.</p>
+                <div class="payment-logos mt-10" style="display: flex; justify-content: center; gap: 10px; font-size: 1.5rem;">
+                    <span title="Pago Móvil">📱</span>
+                    <span title="Zelle">💵</span>
+                    <span title="Binance">🟡</span>
+                    <span title="Paypal">💳</span>
+                </div>
+            </div>
+
+            <button id="btn-submit-nicho" class="btn btn-primary w-100 mt-20" style="background: var(--blue); border-bottom-color: var(--blue-shadow);">IR AL FORMULARIO</button>
+        </div>
+
+        <!-- Modal: Acacentro -->
+        <div class="modal-box" id="modal-acacentro">
+            <div class="modal-header">
+                <div class="module-badge" style="background: #f1f5f9; color: #0f172a;">ACADEMIA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <div class="text-center">
+                <img src="assets/logos/acacentro.png" alt="Acacentro" style="max-width: 200px; margin-bottom: 15px;">
+                <h2 class="section-title">Instituto Acacentro</h2>
+            </div>
+            <div class="info-card mt-20">
+                <p>Centro educativo líder especializado en la formación de habilidades digitales y tecnológicas, preparando a los profesionales del futuro.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: JOM Studio -->
+        <div class="modal-box" id="modal-jom">
+            <div class="modal-header">
+                <div class="module-badge" style="background: #f1f5f9; color: #0f172a;">AGENCIA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <div class="text-center">
+                <img src="assets/logos/jom_studio_1.png" alt="JOM Studio" style="max-width: 150px; margin-bottom: 15px;">
+                <h2 class="section-title">JOM Studio</h2>
+            </div>
+            <div class="info-card mt-20">
+                <p>Agencia creativa y productora audiovisual enfocada en innovación, desarrollo de marcas y contenidos disruptivos.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
+        <!-- Modal: PocketAI -->
+        <div class="modal-box" id="modal-pocketai">
+            <div class="modal-header">
+                <div class="module-badge" style="background: var(--orange-shadow); color: white;">TECNOLOGÍA</div>
+                <button class="modal-close-btn">✖</button>
+            </div>
+            <div class="text-center">
+                <img src="assets/logos/pocketai_color.png" alt="PocketAI" style="max-width: 150px; margin-bottom: 15px;">
+                <h2 class="section-title">PocketAI</h2>
+            </div>
+            <div class="info-card mt-20">
+                <p>Nuestra revolucionaria metodología para integrar la Inteligencia Artificial directamente en tu dispositivo móvil, optimizando procesos en cualquier lugar.</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-20 modal-close-btn-bottom">ENTENDIDO</button>
+        </div>
+
     </div>
 
-    <div class="controls">
-        <button id="prev-btn" class="control-btn" disabled>Anterior</button>
-        <div class="dots-container" id="dots-container"></div>
-        <button id="next-btn" class="control-btn primary">Siguiente</button>
+    <!-- Sticky Footer (Duolingo style) -->
+    <footer class="bottom-footer" id="footer-controls">
+        <div class="footer-inner">
+            <button id="prev-btn" class="btn btn-secondary" disabled>VOLVER</button>
+            <button id="next-btn" class="btn btn-primary">CONTINUAR</button>
+        </div>
+    </footer>
+
+    <!-- Success Overlay (Shown at the end) -->
+    <div class="success-overlay" id="success-overlay">
+        <div class="success-content" style="padding: 40px 20px;">
+            <div style="font-size: 5rem; margin-bottom: 20px;" class="bounce-anim">🚀</div>
+            <h2 class="success-title" style="color: var(--text-main); font-size: 2rem; margin-bottom: 15px; line-height: 1.2;">¡Todo listo para empezar!</h2>
+            <p style="font-size: 1.15rem; color: var(--text-muted); font-weight: 700; margin-bottom: 35px;">Asegura tu cupo ahora y transforma tu celular en un modelo de negocios rentable.</p>
+            
+            <div class="payment-info" style="background: #f1f5f9; padding: 15px; border-radius: 16px; text-align: center; font-size: 0.95rem; margin-bottom: 25px;">
+                <p>Serás redirigido a la pre-inscripción.</p>
+                <div class="payment-logos mt-10" style="display: flex; justify-content: center; gap: 10px; font-size: 1.5rem;">
+                    <span title="Pago Móvil">📱</span>
+                    <span title="Zelle">💵</span>
+                    <span title="Binance">🟡</span>
+                    <span title="Paypal">💳</span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary w-100" id="finish-btn" style="background: var(--blue); border-bottom-color: var(--blue-shadow); font-size: 1.2rem; padding: 18px 0;">INSCRÍBETE YA</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
