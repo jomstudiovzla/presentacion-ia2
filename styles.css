@@ -658,8 +658,8 @@ body {
 }
 
 .img-logo {
-    height: 75px;
-    max-width: 180px;
+    height: 40px;
+    max-width: 120px;
     width: auto;
     object-fit: contain;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -713,7 +713,7 @@ body {
     .subtitle { font-size: 1rem; margin-bottom: 15px; }
     
     .partnership-logos { gap: 10px; }
-    .img-logo { height: 55px; max-width: 130px; }
+    .img-logo { height: 30px; max-width: 90px; }
     
     .badges-row { margin: 10px 0; gap: 8px; }
     .badge { padding: 5px 10px; font-size: 0.8rem; }
