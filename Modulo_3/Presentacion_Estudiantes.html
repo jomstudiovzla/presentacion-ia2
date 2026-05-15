@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Módulo 3 - IA desde tu celular</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+    
+    .reveal-viewport { background-color: #f8fafc !important; }
+    
+    .reveal { font-size: 40px !important; font-weight: 700 !important; color: #000000 !important; font-family: 'Nunito', sans-serif !important; }
+    
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Nunito', sans-serif !important; font-weight: 900 !important; text-transform: none !important;
+      color: #000000 !important; margin-bottom: 25px !important; line-height: 1.1 !important;
+    }
+
+    .reveal h2 { font-size: 2.2em !important; }
+    .reveal h3 { font-size: 1.6em !important; }
+    .reveal p, .reveal li { font-size: 1.1em !important; line-height: 1.4 !important; margin-bottom: 20px !important; }
+
+    .highlight { 
+      color: #059669 !important; /* Verde Esmeralda oscuro */
+      text-shadow: 3px 3px 0px rgba(5, 150, 105, 0.2) !important;
+    }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px !important; margin-top: 30px !important; width: 90%; }
+    
+    .box-card {
+      background: #ffffff !important; padding: 40px !important; border-radius: 30px !important;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important; border: 3px solid #cbd5e1 !important; text-align: center;
+    }
+
+    .gif-container { margin-top: 30px !important; width: 100%; text-align: center; }
+    .gif-container img { 
+      border-radius: 20px !important; max-height: 40vh !important; max-width: 90% !important; 
+      width: auto !important; height: auto !important; box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important; object-fit: contain; 
+    }
+
+    .slide-layout { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <section>
+        <div class="slide-layout">
+          <h2>🎨 Módulo 3</h2>
+          <h3 class="highlight" style="font-size: 2.5em !important;">El Taller Creativo</h3>
+          <p style="color: #334155 !important;">Diseño, video y voz con Inteligencia Artificial.</p>
+        </div>
+      </section>
+      
+      <!-- Slide 2 -->
+      <section>
+        <div class="slide-layout">
+          <h2>Adiós a la hoja en blanco 📝</h2>
+          <p>Con ChatGPT o Gemini, tienes el <strong class="highlight">guion perfecto</strong> en segundos.</p>
+          <div class="gif-container">
+            <img src="https://media.giphy.com/media/xT9IgzoWaVyIGBVkA0/giphy.gif" alt="Writing fast">
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section>
+        <div class="slide-layout">
+          <h2 style="margin-bottom: 40px !important;">Tus nuevas herramientas 🛠️</h2>
+          <div class="grid">
+            <div class="box-card">
+              <h3 style="font-size: 2em !important; color: #2563eb !important;">🖼️ Canva</h3>
+              <p>Genera imágenes increíbles desde cero y edita fondos sin ser diseñador.</p>
+            </div>
+            <div class="box-card">
+              <h3 style="font-size: 2em !important; color: #000000 !important;">🎬 CapCut</h3>
+              <p>Edición mágica: ¡Subtítulos automáticos y plantillas virales en un tap!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section>
+        <div class="slide-layout">
+          <h2>¡Música Maestro! 🎙️</h2>
+          <p class="box-card" style="padding: 30px 40px !important; width: 80% !important;">
+            Con la app <strong>Suno</strong>, puedes crear canciones completas o jingles comerciales <strong class="highlight">solo escribiendo de qué trata</strong>.
+          </p>
+          <div class="gif-container">
+            <img src="https://media.giphy.com/media/l41YkxvU8c7J7Bba0/giphy.gif" alt="Music">
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5 -->
+      <section>
+        <div class="slide-layout">
+          <h2 style="color: #059669 !important; font-size: 2.5em !important;">⭐ Misión Práctica</h2>
+          <p style="margin-bottom: 30px !important;">Desarrolla <strong>tu primera pieza</strong>:</p>
+          <div class="box-card" style="padding: 40px 60px !important; text-align: left;">
+            <ol>
+              <li>Un post gráfico en <strong>Canva</strong>.</li>
+              <li>O un video corto con subtítulos en <strong>CapCut</strong>.</li>
+            </ol>
+          </div>
+          <h1 class="highlight" style="margin-top: 40px !important; font-size: 2.5em !important;">¡Tú eres la agencia! 🚀</h1>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true, transition: 'slide',
+      width: 1280, height: 720, margin: 0.08,
+      controls: true, progress: true, center: true
+    });
+  </script>
+</body>
+</html>
