@@ -2,7 +2,7 @@
 // CONFIGURACIÓN: Reemplaza este enlace con tu Google Form
 // ==========================================
 const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSckI1iQuFIiNF3jQH8qpzG58f8DNK_nbSc-zHdxL666zYVsvw/viewform';
-const WHATSAPP_URL = 'https://wa.me/584241361642?text=Datos%20de%20Pago%20Movil';
+const WHATSAPP_URL = 'https://wa.me/584241361642?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Qu%C3%A9%20alegr%C3%ADa%20que%20quieras%20sumarte%20al%20Taller%20de%20IA%20para%20Celular.%20%F0%9F%93%B1%E2%9C%A8%20Un%20espacio%20100%25%20pr%C3%A1ctico%20para%20aprender%20a%20usar%20estas%20herramientas%20a%20tu%20favor%20desde%20el%20tel%C3%A9fono.%0A%0A%F0%9F%93%8D%20Coordenadas%3A%0A%0ACu%C3%A1ndo%3A%20S%C3%A1bado%2013%20de%20Junio%2C%209%3A00%20AM.%0A%0AD%C3%B3nde%3A%20Sede%20de%20Acacentro%2C%20La%20California%20Norte%20%28Presencial%29.%0A%0A%F0%9F%92%B0%20Inversi%C3%B3n%3A%2020%24%20%28o%20en%20Bs.%20a%20tasa%20BCV%29.%0A%0A%F0%9F%8C%9F%20Asegura%20tu%20cupo%20aqu%C3%AD%0APuedes%20realizar%20el%20aporte%20a%20trav%C3%A9s%20de%20Pago%20M%C3%B3vil%3A%0A%0ABanco%3A%20Mercantil%0A%0AC%C3%A9dula%3A%20V-4.011.071%0A%0ATel%C3%A9fono%3A%200424-1361642%0A%0A%F0%9F%93%A5%20Para%20finalizar%3A%20Al%20pagar%2C%20reenv%C3%ADame%20por%20aqu%C3%AD%20tu%20nombre%20completo%20y%20la%20captura%20del%20comprobante.%0A%0A%C2%A1Te%20confirmo%20de%20una%20vez%20y%20guardamos%20tu%20puesto%21%20Qu%C3%A9%20nota%20que%20te%20sumes.%20%F0%9F%9A%80';
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
